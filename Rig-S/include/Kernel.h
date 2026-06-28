@@ -13,6 +13,7 @@
 #include "EventManager.h"
 #include "SystemInfo.h"
 #include "Version.h"
+#include "MessageBus.h"
 
 class Kernel
 {
@@ -29,16 +30,28 @@ public:
 private:
 
     Config config;
+
     Logger logger;
+
     Statistics statistics;
+
     Dashboard dashboard;
+
     Timer timer;
+
     StateManager stateManager;
+
     TaskScheduler scheduler;
+
     PluginManager pluginManager;
+
     ModuleManager moduleManager;
+
     EventManager eventManager;
+
     SystemInfo systemInfo;
+
+    MessageBus bus;
 };
 
 #endif // KERNEL_H
