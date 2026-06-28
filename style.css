@@ -1,17 +1,475 @@
+/*==================================================
+    Rig-S® Dashboard
+    Version : 0.1.0 Alpha
+==================================================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+body{
+
+    background:#3d0b18;
+
+    color:#ffffff;
+
+    font-family:Segoe UI,Arial,sans-serif;
+
+}
+
+/*==========================
+ Header
+==========================*/
+
+header{
+
+    background:#5a1022;
+
+    border-bottom:4px solid gold;
+
+    text-align:center;
+
+    padding:25px;
+
+    box-shadow:0 0 20px rgba(255,215,0,.25);
+
+}
+
+header h1{
+
+    font-size:42px;
+
+    letter-spacing:4px;
+
+}
+
+header p{
+
+    color:#f0d080;
+
+    margin-top:10px;
+
+    font-size:18px;
+
+}
+
+/*==========================
+ Container
+==========================*/
+
+.container{
+
+    width:95%;
+
+    max-width:1500px;
+
+    margin:auto;
+
+    padding:25px;
+
+}
+
+/*==========================
+ Panels
+==========================*/
+
+.panel{
+
+    background:#561425;
+
+    border:2px solid gold;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 0 15px rgba(255,215,0,.18);
+
+}
+
+.panel h2{
+
+    color:#ffd966;
+
+    margin-bottom:15px;
+
+}
+
+/*==========================
+ Inputs
+==========================*/
+
+input,
+select{
+
+    width:100%;
+
+    padding:14px;
+
+    background:#22050d;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+input:focus,
+select:focus{
+
+    outline:none;
+
+    box-shadow:0 0 12px gold;
+
+}
+
+/*==========================
+ Wallet
+==========================*/
+
 .walletStatus{
 
     margin-top:15px;
 
-    padding:12px;
+    padding:15px;
+
+    border-radius:10px;
 
     background:#2b0810;
 
     border:1px solid gold;
 
-    border-radius:8px;
-
-    color:#ffffff;
-
     line-height:1.8;
+
+}
+
+/*==========================
+ Gauges
+==========================*/
+
+.gauges{
+
+    display:flex;
+
+    justify-content:space-evenly;
+
+    flex-wrap:wrap;
+
+    margin-top:25px;
+
+}
+
+.gauge{
+
+    text-align:center;
+
+    margin:15px;
+
+}
+
+.dial{
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    border:8px solid gold;
+
+    background:#6b1730;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:white;
+
+    box-shadow:0 0 25px rgba(255,215,0,.30);
+
+    transition:.4s;
+
+}
+
+.dial:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 30px gold;
+
+}
+/*==========================
+ Statistics
+==========================*/
+
+.statistics{
+
+    display:flex;
+
+    justify-content:space-around;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+
+}
+
+.card{
+
+    width:220px;
+
+    background:#5a1022;
+
+    border:2px solid gold;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    padding:20px;
+
+    margin:10px;
+
+    transition:.30s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 20px gold;
+
+}
+
+.card h3{
+
+    color:#ffd966;
+
+}
+
+.card span{
+
+    display:block;
+
+    margin-top:15px;
+
+    font-size:36px;
+
+    font-weight:bold;
+
+    color:#00ff66;
+
+}
+
+/*==========================
+ Console
+==========================*/
+
+.console{
+
+    margin-top:30px;
+
+}
+
+.console textarea{
+
+    width:100%;
+
+    height:260px;
+
+    background:#050505;
+
+    color:#00ff66;
+
+    border:2px solid gold;
+
+    border-radius:10px;
+
+    padding:15px;
+
+    font-family:Consolas,monospace;
+
+    font-size:15px;
+
+    resize:none;
+
+}
+
+/*==========================
+ Buttons
+==========================*/
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin-top:30px;
+
+}
+
+button{
+
+    width:180px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#8b0000;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+button:hover{
+
+    background:#b00000;
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 20px gold;
+
+}
+
+/*==========================
+ Footer
+==========================*/
+
+footer{
+
+    margin-top:40px;
+
+    text-align:center;
+
+    padding:30px;
+
+    border-top:2px solid gold;
+
+    color:#dddddd;
+
+}
+
+footer h3{
+
+    color:#ffd966;
+
+}
+
+#statusBar{
+
+    margin-top:20px;
+
+    padding:12px;
+
+    background:#25070f;
+
+    border:1px solid gold;
+
+    border-radius:10px;
+
+}
+
+/*==========================
+ Scrollbar
+==========================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#25070f;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:gold;
+
+    border-radius:10px;
+
+}
+
+/*==========================
+ Mobile
+==========================*/
+
+@media(max-width:900px){
+
+    .gauges{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .statistics{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .card{
+
+        width:95%;
+
+    }
+
+    .dial{
+
+        width:160px;
+
+        height:160px;
+
+        font-size:24px;
+
+    }
 
 }
