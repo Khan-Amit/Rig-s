@@ -1,0 +1,31 @@
+/*
+    Rig-S®
+    main.cpp
+*/
+
+#include <iostream>
+
+#include "RigController.h"
+
+int main()
+{
+    std::cout << "==============================" << std::endl;
+    std::cout << "      Rig-S Controller        " << std::endl;
+    std::cout << "==============================" << std::endl;
+
+    RigController rig;
+
+    if (!rig.initialize())
+    {
+        std::cerr << "Initialization failed." << std::endl;
+        return 1;
+    }
+
+    std::cout << "Controller initialized." << std::endl;
+
+    rig.run();
+
+    std::cout << "Controller stopped." << std::endl;
+
+    return 0;
+}
