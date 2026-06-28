@@ -1,25 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Rig-S® Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Rig-S®</h1>
+
+<p>Professional C++ Dashboard</p>
+
+</header>
+
+<div class="container">
+
+<!-- ===========================
+     PROJECT INFORMATION
+============================ -->
+
 <div class="panel">
 
-    <h2>Visitors</h2>
+<h2>Project Information</h2>
 
-    <div class="statistics">
+<p><strong>Project</strong> : Rig-S®</p>
 
-        <div class="card">
+<p><strong>Version</strong> : 0.1.0 Alpha</p>
 
-            <h3>Today's Visits</h3>
+<p><strong>Language</strong> : C++20</p>
 
-            <span id="todayVisitors">1</span>
-
-        </div>
-
-        <div class="card">
-
-            <h3>Total Visits</h3>
-
-            <span id="totalVisitors">1</span>
-
-        </div>
-
-    </div>
+<p><strong>Status</strong> :
+<span id="projectStatus">
+READY
+</span>
+</p>
 
 </div>
+
+<!-- ===========================
+     WALLET
+============================ -->
+
+<div class="panel">
+
+<h2>Wallet</h2>
+
+<input
+
+id="walletAddress"
+
+type="text"
+
+readonly
+
+value="45ktWDeTNtUcVMXfJRKS6bbXMznMAStZFX6niJHcVy9uQk132bHJ21QTC5AKvqyx9XJN5e7mPc3vViyGnB2BM6DD1ZoAoZb">
+
+<br><br>
+
+<div class="walletStatus">
+
+<p>
+
+Status :
+
+<span id="walletStatus">
+
+Ready
+
+</span>
+
+</p>
+
+<p>
+
+Last Update :
+
+<span id="walletUpdate">
+
+--:--:--
+
+</span>
+
+</p>
+
+</div>
+
+</div>
+
+<!-- ===========================
+     POOL
+============================ -->
+
+<div class="panel">
+
+<h2>Select Pool</h2>
+
+<select id="pool">
+
+<option>SupportXMR</option>
+
+<option>MoneroOcean</option>
+
+<option>P2Pool</option>
+
+<option>Custom Pool</option>
+
+</select>
+
+</div>
+
+<!-- ===========================
+     VISITORS
+============================ -->
+
+<div class="panel">
+
+<h2>Visitors</h2>
+
+<div class="statistics">
+
+<div class="card">
+
+<h3>Today</h3>
+
+<span id="todayVisitors">
+
+1
+
+</span>
+
+</div>
+
+<div class="card">
+
+<h3>Total</h3>
+
+<span id="totalVisitors">
+
+1
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ===========================
+     GAUGES
+============================ -->
+
+<div class="gauges">
+
+<div class="gauge">
+
+<div
+
+id="speedDial"
+
+class="dial">
+
+0 H/s
+
+</div>
+
+<p>Hash Speed</p>
+
+</div>
+
+<div class="gauge">
+
+<div
+
+id="heatDial"
+
+class="dial">
+
+0 °C
+
+</div>
+
+<p>CPU Heat</p>
+
+</div>
+
+<div class="gauge">
+
+<div
+
+id="timeDial"
+
+class="dial">
+
+00:00:00
+
+</div>
+
+<p>Runtime</p>
+
+</div>
+
+</div>
+
+<!-- ===========================
+     STATISTICS
+============================ -->
+
+<div class="statistics">
+
+<div class="card">
+
+<h3>Submitted</h3>
+
+<span id="submitted">
+
+0
+
+</span>
+
+</div>
+
+<div class="card">
+
+<h3>Accepted</h3>
+
+<span id="accepted">
+
+0
+
+</span>
+
+</div>
+
+<div class="card">
+
+<h3>Rejected</h3>
+
+<span id="rejected">
+
+0
+
+</span>
+
+</div>
+
+</div>
+<!-- ===========================
+     RUNNING WINDOW
+============================ -->
+
+<div class="console">
+
+<h2>Running Window</h2>
+
+<textarea
+id="console"
+readonly>
+
+Rig-S® Dashboard Ready...
+
+Waiting for START...
+
+</textarea>
+
+</div>
+
+<!-- ===========================
+     CONTROLS
+============================ -->
+
+<div class="buttons">
+
+<button id="start">
+
+▶ START
+
+</button>
+
+<button id="stop">
+
+■ STOP
+
+</button>
+
+<button id="clearLog">
+
+🗑 CLEAR LOG
+
+</button>
+
+<button id="settings">
+
+⚙ SETTINGS
+
+</button>
+
+</div>
+
+<!-- ===========================
+     SYSTEM STATUS
+============================ -->
+
+<div class="panel">
+
+<h2>System Status</h2>
+
+<div class="statistics">
+
+<div class="card">
+
+<h3>Application</h3>
+
+<span style="color:#00ff66;">
+ONLINE
+</span>
+
+</div>
+
+<div class="card">
+
+<h3>Logger</h3>
+
+<span style="color:#00ff66;">
+READY
+</span>
+
+</div>
+
+<div class="card">
+
+<h3>Configuration</h3>
+
+<span style="color:#00ff66;">
+LOADED
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ===========================
+     FOOTER
+============================ -->
+
+<footer>
+
+<hr>
+
+<br>
+
+<h3>
+
+Rig-S®
+
+</h3>
+
+<p>
+
+Version 0.1.0 Alpha
+
+</p>
+
+<p>
+
+C++20 Backend
+
+</p>
+
+<p>
+
+Professional Dashboard
+
+</p>
+
+<br>
+
+<p>
+
+Designed by
+
+<strong>
+
+Seliim Ahmed
+
+</strong>
+
+</p>
+
+<p>
+
+Email
+
+<br>
+
+amit.khanna.1082@gmail.com
+
+</p>
+
+<br>
+
+<p>
+
+Copyright © 2026
+
+All Rights Reserved
+
+</p>
+
+<br>
+
+<div id="statusBar">
+
+Status :
+
+<span style="color:#00ff66;">
+
+READY
+
+</span>
+
+|
+
+Runtime :
+
+<span id="footerRuntime">
+
+00:00:00
+
+</span>
+
+|
+
+Visitors :
+
+<span id="footerVisitors">
+
+1
+
+</span>
+
+</div>
+
+<br>
+
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
