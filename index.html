@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -20,55 +21,23 @@ content="width=device-width, initial-scale=1.0">
 
 <h1>Rig-S®</h1>
 
-<p>Professional C++ Dashboard</p>
+<p>Professional Dashboard</p>
 
 </header>
 
 <div class="container">
 
-<!-- ===========================
-     PROJECT INFORMATION
-============================ -->
-
-<div class="panel">
-
-<h2>Project Information</h2>
-
-<p><strong>Project</strong> : Rig-S®</p>
-
-<p><strong>Version</strong> : 0.1.0 Alpha</p>
-
-<p><strong>Language</strong> : C++20</p>
-
-<p><strong>Status</strong> :
-<span id="projectStatus">
-READY
-</span>
-</p>
-
-</div>
-
-<!-- ===========================
-     WALLET
-============================ -->
+<!-- Wallet -->
 
 <div class="panel">
 
 <h2>Wallet</h2>
 
 <input
-
 id="walletAddress"
-
 type="text"
-
 readonly
-
 value="45ktWDeTNtUcVMXfJRKS6bbXMznMAStZFX6niJHcVy9uQk132bHJ21QTC5AKvqyx9XJN5e7mPc3vViyGnB2BM6DD1ZoAoZb">
-
-<br><br>
-
-<div class="walletStatus">
 
 <p>
 
@@ -82,29 +51,13 @@ Ready
 
 </p>
 
-<p>
-
-Last Update :
-
-<span id="walletUpdate">
-
---:--:--
-
-</span>
-
-</p>
-
 </div>
 
-</div>
-
-<!-- ===========================
-     POOL
-============================ -->
+<!-- Pool -->
 
 <div class="panel">
 
-<h2>Select Pool</h2>
+<h2>Pool</h2>
 
 <select id="pool">
 
@@ -114,94 +67,48 @@ Last Update :
 
 <option>P2Pool</option>
 
-<option>Custom Pool</option>
+<option>Custom</option>
 
 </select>
 
 </div>
 
-<!-- ===========================
-     VISITORS
-============================ -->
-
-<div class="panel">
-
-<h2>Visitors</h2>
-
-<div class="statistics">
-
-<div class="card">
-
-<h3>Today</h3>
-
-<span id="todayVisitors">
-
-1
-
-</span>
-
-</div>
-
-<div class="card">
-
-<h3>Total</h3>
-
-<span id="totalVisitors">
-
-1
-
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- ===========================
-     GAUGES
-============================ -->
+<!-- Gauges -->
 
 <div class="gauges">
 
 <div class="gauge">
 
 <div
-
 id="speedDial"
-
 class="dial">
 
 0 H/s
 
 </div>
 
-<p>Hash Speed</p>
+<p>Speed</p>
 
 </div>
 
 <div class="gauge">
 
 <div
-
 id="heatDial"
-
 class="dial">
 
 0 °C
 
 </div>
 
-<p>CPU Heat</p>
+<p>Heat</p>
 
 </div>
 
 <div class="gauge">
 
 <div
-
 id="timeDial"
-
 class="dial">
 
 00:00:00
@@ -214,9 +121,7 @@ class="dial">
 
 </div>
 
-<!-- ===========================
-     STATISTICS
-============================ -->
+<!-- Counters -->
 
 <div class="statistics">
 
@@ -256,10 +161,8 @@ class="dial">
 
 </div>
 
-</div>
-<!-- ===========================
-     RUNNING WINDOW
-============================ -->
+</div> 
+     <!-- Console -->
 
 <div class="console">
 
@@ -269,17 +172,15 @@ class="dial">
 id="console"
 readonly>
 
-Rig-S® Dashboard Ready...
+Rig-S® Ready...
 
-Waiting for START...
+Press START...
 
 </textarea>
 
 </div>
 
-<!-- ===========================
-     CONTROLS
-============================ -->
+<!-- Buttons -->
 
 <div class="buttons">
 
@@ -295,67 +196,29 @@ Waiting for START...
 
 </button>
 
-<button id="clearLog">
-
-🗑 CLEAR LOG
-
-</button>
-
-<button id="settings">
-
-⚙ SETTINGS
-
-</button>
-
 </div>
 
-<!-- ===========================
-     SYSTEM STATUS
-============================ -->
+<!-- Visitor Counter -->
 
 <div class="panel">
 
-<h2>System Status</h2>
+<h2>Visitors</h2>
 
-<div class="statistics">
+<p>
 
-<div class="card">
+Total Visitors :
 
-<h3>Application</h3>
+<span id="totalVisitors">
 
-<span style="color:#00ff66;">
-ONLINE
+0
+
 </span>
 
-</div>
-
-<div class="card">
-
-<h3>Logger</h3>
-
-<span style="color:#00ff66;">
-READY
-</span>
+</p>
 
 </div>
 
-<div class="card">
-
-<h3>Configuration</h3>
-
-<span style="color:#00ff66;">
-LOADED
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- ===========================
-     FOOTER
-============================ -->
+<!-- Footer -->
 
 <footer>
 
@@ -377,37 +240,13 @@ Version 0.1.0 Alpha
 
 <p>
 
-C++20 Backend
-
-</p>
-
-<p>
-
 Professional Dashboard
 
 </p>
 
-<br>
-
 <p>
 
-Designed by
-
-<strong>
-
-Seliim Ahmed
-
-</strong>
-
-</p>
-
-<p>
-
-Email
-
-<br>
-
-amit.khanna.1082@gmail.com
+C++ Backend
 
 </p>
 
@@ -417,45 +256,9 @@ amit.khanna.1082@gmail.com
 
 Copyright © 2026
 
-All Rights Reserved
+Seliim Ahmed
 
 </p>
-
-<br>
-
-<div id="statusBar">
-
-Status :
-
-<span style="color:#00ff66;">
-
-READY
-
-</span>
-
-|
-
-Runtime :
-
-<span id="footerRuntime">
-
-00:00:00
-
-</span>
-
-|
-
-Visitors :
-
-<span id="footerVisitors">
-
-1
-
-</span>
-
-</div>
-
-<br>
 
 </footer>
 
