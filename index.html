@@ -1,164 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Rig-S® Dashboard</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-<header>
-
-<h1>Rig-S®</h1>
-
-<p>Research Dashboard</p>
-
-</header>
-
-<div class="container">
-
 <div class="panel">
 
-<h2>Wallet</h2>
+    <h2>Wallet</h2>
 
-<input
-type="text"
-id="wallet"
-placeholder="Wallet Address">
+    <input
+        type="text"
+        id="walletAddress"
+        value="45ktWDeTNtUcVMXfJRKS6bbXMznMAStZFX6niJHcVy9uQk132bHJ21QTC5AKvqyx9XJN5e7mPc3vViyGnB2BM6DD1ZoAoZb"
+        readonly>
 
-</div>
+    <br><br>
 
-<div class="panel">
+    <div class="walletStatus">
 
-<h2>Pool</h2>
+        <strong>Status:</strong>
+        <span id="walletStatus">Ready</span>
 
-<select id="pool">
+        <br>
 
-<option>Select Pool</option>
+        <strong>Last Update:</strong>
+        <span id="walletUpdate">--:--:--</span>
 
-<option>SupportXMR</option>
-
-<option>MoneroOcean</option>
-
-<option>P2Pool</option>
-
-<option>Custom</option>
-
-</select>
+    </div>
 
 </div>
-
-<div class="gauges">
-
-<div class="gauge">
-
-<div id="speedDial" class="dial">
-0 H/s
-</div>
-
-<p>Speed</p>
-
-</div>
-
-<div class="gauge">
-
-<div id="heatDial" class="dial">
-0 °C
-</div>
-
-<p>Heat</p>
-
-</div>
-
-<div class="gauge">
-
-<div id="timeDial" class="dial">
-00:00:00
-</div>
-
-<p>Runtime</p>
-
-</div>
-
-</div>
-
-<div class="statistics">
-
-<div class="card">
-
-<h3>Submitted</h3>
-
-<span id="submitted">
-0
-</span>
-
-</div>
-
-<div class="card">
-
-<h3>Accepted</h3>
-
-<span id="accepted">
-0
-</span>
-
-</div>
-
-<div class="card">
-
-<h3>Rejected</h3>
-
-<span id="rejected">
-0
-</span>
-
-</div>
-
-</div>
-
-<div class="console">
-
-<h2>Running Window</h2>
-
-<textarea
-id="console"
-readonly>
-
-Rig-S Initialized...
-
-Waiting...
-
-</textarea>
-
-</div>
-
-<div class="buttons">
-
-<button id="start">
-
-START
-
-</button>
-
-<button id="stop">
-
-STOP
-
-</button>
-
-</div>
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
