@@ -1,31 +1,70 @@
-/*
-    Rig-S®
-    main.cpp
-*/
+#include "../include/Logger.h"
 
 #include <iostream>
+#include <ctime>
 
-#include "RigController.h"
-
-int main()
+Logger::Logger()
 {
-    std::cout << "==============================" << std::endl;
-    std::cout << "      Rig-S Controller        " << std::endl;
-    std::cout << "==============================" << std::endl;
+}
 
-    RigController rig;
+Logger::~Logger()
+{
+    close();
+}
 
-    if (!rig.initialize())
+bool Logger::open(const std::string& filename)
+{
+    logFile.open(filename, std::ios::app);
+
+    return logFile.is_open();
+}
+
+void Logger::close()
+{
+    if(logFile.is_open())
     {
-        std::cerr << "Initialization failed." << std::endl;
-        return 1;
+        logFile.close();
+    }
+}
+
+void Logger::info(const std::string& message)
+{
+    write("INFO", message);
+}
+
+void Logger::warning(const std::string& message)
+{
+    write("WARNING", message);
+}
+
+void Logger::error(const std::string& message)
+{
+    write("ERROR", message);
+}
+
+void Logger::write(
+    const std::string& level,
+    const std::string& message)
+{
+    std::time_t now = std::time(nullptr);
+
+    std::string text =
+        std::string(std::ctime(&now));
+
+    if(!text.empty())
+    {
+        text.pop_back();
     }
 
-    std::cout << "Controller initialized." << std::endl;
+    std::string line =
+        "[" + text + "] [" +
+        level + "] " +
+        message;
 
-    rig.run();
+    std::cout << line << std::endl;
 
-    std::cout << "Controller stopped." << std::endl;
-
-    return 0;
+    if(logFile.is_open())
+    {
+        logFile << line << std::endl;
+    }
 }
